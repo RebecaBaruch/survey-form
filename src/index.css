@@ -1,0 +1,32 @@
+#index-figure{
+    display: flex;
+    justify-content: start;
+}
+
+#welcome-title{
+    font-size: 2rem;
+}
+
+#welcome-subTlt{
+    font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #welcome-title{
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #welcome-title{
+        font-size: 5rem;
+    }
+
+    #welcome-subTlt{
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

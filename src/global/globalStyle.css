@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --green: #3EB25E;
+    --light-green: #55ce77;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    min-width: 80%;
+}
+
+figure {
+    width: 50%;
+}
+
+.txt-container {
+    text-align: center;
+}
+
+.txt-container h1{
+    margin-bottom:15px;
+}
+
+h1, p, button, a{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+a, button {
+    padding: 7px 40px;
+    background-color: var(--green);
+    
+    outline: none;
+    border: none;
+    border-radius: 50px;
+
+    color: white;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, 
+button:hover {
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    width: 50%;
+}
+
+@media (max-width: 767px) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    figure img{
+        width: 62%;
+    }
+
+    article{
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    figure img{
+        width: 62%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    figure img{
+        width: 72%;
+    }
+}
