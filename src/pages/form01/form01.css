@@ -1,0 +1,46 @@
+:root {
+    --green: #3EB25E;
+    --light-green: rgba(62, 178, 94, 0.3);
+    --hover-green: #55ce77;
+    font-size: 62.5%;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.radio-title {
+    font-size: 1.5rem;
+}
+
+form footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*cellphone*/
+@media (max-width: 767px) {
+
+    .radio-container {
+        gap: 2px;
+    }
+
+    .radio-title {
+        font-size: 1rem;
+    }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 979px) {
+    .radio-container {
+        gap: 2px;
+    }
+
+    .radio-title {
+        font-size: 1rem;
+    }
+}

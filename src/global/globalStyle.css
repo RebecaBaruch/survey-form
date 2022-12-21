@@ -2,7 +2,9 @@
 
 :root {
     --green: #3EB25E;
-    --light-green: #55ce77;
+    --light-green: rgba(62, 178, 94, 0.3);
+    --hover-green: #55ce77;
+    font-size: 62.5%;
 }
 
 * {
@@ -16,8 +18,10 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
+/*default layout for all pages*/
 main {
     display: flex;
     justify-content: space-evenly;
@@ -27,50 +31,14 @@ main {
 }
 
 figure {
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
-.txt-container {
-    text-align: center;
-}
-
-.txt-container h1{
-    margin-bottom:15px;
-}
-
-h1, p, button, a{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-h1{
-    font-size: 2rem;
-}
-
-p{
-    font-size: 1rem;
-}
-
-a, button {
-    padding: 7px 40px;
-    background-color: var(--green);
-    
-    outline: none;
-    border: none;
-    border-radius: 50px;
-
-    color: white;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover, 
-button:hover {
-    background-color: var(--light-green);
-    cursor: pointer;
+figure img{
+    width: 72%;
 }
 
 article {
@@ -80,9 +48,104 @@ article {
     gap: 10px;
     align-items: center;
 
+    padding: 0 7.5%;
     width: 50%;
 }
 
+.txt-container {
+    text-align: center;
+}
+
+.txt-container h1 {
+    margin-bottom:15px;
+}
+
+h1, p, button, a {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 2.1rem;
+}
+
+a, button {
+    padding: 7px 30px;
+    background-color: var(--green);
+    
+    outline: none;
+    border: none;
+    border-radius: 50px;
+
+    color: white;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, 
+button:hover {
+    background-color: var(--hover-green);
+    cursor: pointer;
+}
+
+.dbButton-box {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px
+}
+
+.dbButton-box button {
+    width: 100%;
+}
+
+.fullBtn {
+    width: 100%;
+}
+
+/*deafult layout for form pages*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+article form fieldset p{
+    text-align: start;
+}
+
+fieldset {
+    border: none;
+}
+
+.input-title {
+    font-size: 2rem;
+    text-align: start;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../img/Vector 1.svg');
+    background-repeat: no-repeat;
+    background-position: 3% center;
+        
+    padding: 10px 40px;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/*cellphone*/
 @media (max-width: 767px) {
     main {
         display: flex;
@@ -99,15 +162,60 @@ article {
         width: auto;
     }
 
-    figure img{
-        width: 62%;
+    figure img {
+        width: 70%;
     }
 
-    article{
+    article {
         width: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2px;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .dbButton-box{
+        display: flex;
+        justify-content: space-around;
+        max-width: 100%;
+    }   
+
+    button {
+        padding: 4px 20px;
+        font-size: 1rem;
+    }
+
+    /*form format*/
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-title {
+        font-size: 1.2rem;
+    }
+    
+    label {
+        font-size: .8rem;
+    }
+
+    select {
+        font-size: 1rem;
+        padding: 2px 30px;
+    }
+
+    form footer {
+        gap: 5px;
     }
 }
 
+/*tablet*/
 @media (min-width: 768px) and (max-width: 979px) {
     main {
         display: flex;
@@ -121,15 +229,57 @@ article {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
         width: auto;
     }
 
     figure img{
-        width: 62%;
+        width: 60%;
     }
+
+    article {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    a, button {
+        padding: 4px 20px;
+        font-size: .8rem;
+    }
+
+    /*form format*/
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .input-title {
+        font-size: 1.2rem;
+    }
+    
+    label {
+        font-size: .8rem;
+    }
+
+    select {
+        font-size: .8rem;
+        padding: 5px 30px;
+    }
+
+    form footer {
+        gap: 5px
 }
 
-@media (min-width: 1024px) {
+/*desktop 1024px*/
+@media (min-width: 1024px) and (max-width: 1030px) {
     main {
         display: flex;
         justify-content: space-evenly;
@@ -147,5 +297,18 @@ article {
 
     figure img{
         width: 72%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        font-size: 1.4rem;
+    }
+    
+    a, button {
+        padding: 7px 20px;
+        font-size: 1.2rem;
     }
 }
