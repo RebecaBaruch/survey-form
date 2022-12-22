@@ -7,7 +7,7 @@
     <title>Sourvey Form - Form 02</title>
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
     <link rel="stylesheet" href="form02.css" type="text/css">
-    <script src="../../../dist/app.js"></script>
+    <script src="../../../dist/app.js" defer></script>
 </head>
 <body>
     <main>
@@ -31,23 +31,23 @@
 
                     <div class="checkbox-container">
                         <label class="container">
-                            <input type="checkbox" name="resource01" id="resource01">
+                            <input type="checkbox" class="checkBox" name="resource01" id="resource01">
                             <span class="checkmark"></span>
                             Books and articles
                         </label>
                         <label class="container">
-                            <input type="checkbox" name="resource02" id="resource02">
+                            <input type="checkbox" class="checkBox" name="resource02" id="resource02">
                             <span class="checkmark"></span>
                             Youtube tutorial videos
                         </label>
                         <label class="container">
-                            <input type="checkbox" name="resource03" id="resource03">
+                            <input type="checkbox" class="checkBox" name="resource03" id="resource03">
                             <span class="checkmark"></span>
                             online or face to face courses
                         </label>
                         <label class="container">
-                            <input type="checkbox">
-                            <span class="checkmark" name="resource04" id="resource04"></span>
+                            <input type="checkbox" class="checkBox" name="resource04" id="resource04">
+                            <span class="checkmark"></span>
                             experience with little investment
                         </label>
                     </div>
@@ -56,7 +56,7 @@
                 <footer>
                     <div class="dbButton-box">
                         <button>Back</button>
-                        <button>Next</button>
+                        <input class="disabledBtn sbmAccount" type="submit" value="Next" disabled>
                     </div>
                     <button class="fullBtn">Skip</button>
                 </footer>

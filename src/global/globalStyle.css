@@ -3,7 +3,7 @@
 :root {
     --green: #3EB25E;
     --light-green: rgba(62, 178, 94, 0.3);
-    --hover-green: #55ce77;
+    --hover-yellow: #FFFF7D;
     --yellow: #ffff7d61;
 
     font-size: 62.5%;
@@ -77,7 +77,7 @@ p {
 
 a, 
 button, 
-input[type='submit'] {
+.abled {
     padding: 10px 30px;
     background-color: var(--green);
     
@@ -91,14 +91,31 @@ input[type='submit'] {
     font-weight: bold;
 }
 
+.disabledBtn {
+    cursor: not-allowed;
+    padding: 10px 30px;
+    
+    outline: none;
+    border: none;
+    border-radius: 50px;
+
+    color: white;
+    white-space: nowrap;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: var(--light-green);
+}
+
+
 a {
     text-decoration: none;
 }
 
 a:hover, 
 button:hover,
-input[type='submit']:hover {
-    background-color: var(--hover-green);
+.abled:hover {
+    background-color: var(--hover-yellow);
+    color: black;
     cursor: pointer;
 }
 
@@ -153,6 +170,8 @@ footer {
 }
 
 .dbButton-box button,
+.disabledBtn,
+.abled,
 .fullBtn {
     padding: 7px 30px;
     width: 100%;
@@ -203,8 +222,11 @@ footer {
     }   
     
    article .dbButton-box button,
+   article .dbButton-box a,
    .fullBtn,
-   input[type='submit'] {
+   .disabledBtn,
+   .abled,
+   .nextBtn {
        padding: 5px;
        width: 100%;
        font-size: .9rem;
@@ -270,7 +292,8 @@ footer {
 
     .dbButton-box button,
     .fullBtn,
-    input[type='submit'] {
+    .disabledBtn,
+    .able {
         padding: 5px auto;
         width: 100%;
         font-size: .9rem;
@@ -353,8 +376,11 @@ footer {
     }
 
     .dbButton-box button,
+    article .dbButton-box a,
     .fullBtn,
-    input[type='submit'] {
+    .disabledBtn,
+    .able,
+    .nextBtn {
         padding: 10px auto;
         width: 100%;
         font-size: 1.5rem;

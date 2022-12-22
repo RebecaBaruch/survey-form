@@ -7,7 +7,7 @@
     <title>Sourvey Form - Form 01</title>
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
     <link rel="stylesheet" href="form01.css" type="text/css">
-    <script src="../../../dist/app.js"></script>
+    <script src="../../../dist/app.js" defer></script>
 </head>
 <body>
     <main>
@@ -29,23 +29,23 @@
 
                     <div class = "radio-container">
                         <label class="radio-box">stock market
-                            <input type="radio" checked="checked" name="radio">
+                            <input type="radio" class="radioOp" class="radioOp" name="radioOp" id="radio01" value="stock market">
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-box">foreign exchange
-                            <input type="radio" name="radio">
+                            <input type="radio" class="radioOp" name="radioOp" id="radio02" value="foreign exchange">
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-box">commodity
-                            <input type="radio" name="radio">
+                            <input type="radio" class="radioOp" name="radioOp" id="radio03" value="commodity">
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-box">bond market
-                            <input type="radio" name="radio">
+                            <input type="radio" class="radioOp" name="radioOp" id="radio04" value="bond market">
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-box">cryptocurrency market
-                            <input type="radio" name="radio">
+                            <input type="radio" class="radioOp" name="radioOp" id="radio05" value="cryptocurrency market">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -53,8 +53,8 @@
 
                 <footer>
                     <div class="dbButton-box">
-                        <button>Back</button>
-                        <button>Next</button>
+                        <button onclick="window.history.back()">Back</button>
+                        <input class="disabledBtn sbmAccount" type="submit" value="Next" disabled>
                     </div>
                     <button class="fullBtn">Skip</button>
                 </footer>
