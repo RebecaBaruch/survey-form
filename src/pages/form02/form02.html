@@ -4,49 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourvey Form - Form 01</title>
+    <title>Sourvey Form - Form 02</title>
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
-    <link rel="stylesheet" href="form01.css" type="text/css">
+    <link rel="stylesheet" href="form02.css" type="text/css">
     <script src="../../../dist/app.js"></script>
 </head>
 <body>
     <main>
         <figure class="side-img" id="index-figure">
-            <img src="../../img/two.svg" alt="a-hero-image">
+            <img src="../../img/three.svg" alt="a-hero-image">
         </figure>
 
         <article>
             <form action="">
                 <fieldset>
-                    <h1 class="input-title">What is the status of your account?</h1>
+                    <h1 class="input-title">How do you decide to invest?</h1>
                     <select name="exist-account" id="exist-account">
-                        <option value="not-exists">I have not created an account yet.</option>
-                        <option value="it-exists">I have already created an account yet.</option>
+                        <option value="not-exists">I have not invested yet.</option>
+                        <option value="it-exists">I have already invested.</option>
                     </select>
+
                 </fieldset>
+
                 <fieldset class="radio-fieldset">
                     <h1 class="input-title">In which financial markets do you operate?</h1>
 
-                    <div class = "radio-container">
-                        <label class="radio-box">stock market
-                            <input type="radio" checked="checked" name="radio">
+                    <div class="checkbox-container">
+                        <label class="container">
+                            <input type="checkbox" checked="checked" name="resource01" id="resource01">
                             <span class="checkmark"></span>
+                            Books and articles
                         </label>
-                        <label class="radio-box">foreign exchange
-                            <input type="radio" name="radio">
+                        <label class="container">
+                            <input type="checkbox" name="resource02" id="resource02">
                             <span class="checkmark"></span>
+                            Youtube tutorial videos
                         </label>
-                        <label class="radio-box">commodity
-                            <input type="radio" name="radio">
+                        <label class="container">
+                            <input type="checkbox" name="resource03" id="resource03">
                             <span class="checkmark"></span>
+                            online or face to face courses
                         </label>
-                        <label class="radio-box">bond market
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="radio-box">cryptocurrency market
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark" name="resource04" id="resource04"></span>
+                            experience with little investment
                         </label>
                     </div>
                 </fieldset>
@@ -60,7 +62,6 @@
                 </footer>
             </form>
         </article>
-
     </main>
 </body>
 </html>

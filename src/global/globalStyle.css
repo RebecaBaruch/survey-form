@@ -74,7 +74,7 @@ p {
 }
 
 a, button {
-    padding: 7px 30px;
+    padding: 10px 30px;
     background-color: var(--green);
     
     outline: none;
@@ -83,7 +83,7 @@ a, button {
 
     color: white;
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
@@ -95,21 +95,6 @@ a:hover,
 button:hover {
     background-color: var(--hover-green);
     cursor: pointer;
-}
-
-.dbButton-box {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px
-}
-
-.dbButton-box button {
-    padding: 4px 30px;
-    width: 100%;
-}
-
-.fullBtn {
-    width: 100%;
 }
 
 /*deafult layout for form pages*/
@@ -147,6 +132,26 @@ select {
     cursor: pointer;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dbButton-box {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px
+}
+
+.dbButton-box button,
+.fullBtn {
+    padding: 7px 30px;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
 /*cellphone*/
 @media (max-width: 767px) {
     main {
@@ -170,7 +175,8 @@ select {
     }
 
     article {
-        width: auto;
+        padding: 0;
+        width: 85%;
     }
 
     h1 {
@@ -185,8 +191,16 @@ select {
     .dbButton-box{
         display: flex;
         justify-content: space-around;
-        max-width: 100%;
+        gap: 10px;
+        width: 100%;
     }   
+    
+   article .dbButton-box button,
+   .fullBtn {
+       padding: 5px;
+       width: 100%;
+       font-size: .9rem;
+   }
 
     button {
         padding: 4px 20px;
@@ -244,6 +258,13 @@ select {
 
     article {
         padding: 0;
+    }
+
+    .dbButton-box button,
+    .fullBtn {
+        padding: 5px auto;
+        width: 100%;
+        font-size: .9rem;
     }
 
     h1 {
@@ -322,7 +343,11 @@ select {
         font-size: 1.2rem;
     }
 
-    .dbButton-box button {
-        padding: 4px 20px;
+    .dbButton-box button,
+    .fullBtn {
+        padding: 10px auto;
+        width: 100%;
+        font-size: 1.5rem;
     }
+
 }
