@@ -1,0 +1,25 @@
+:root {
+    --green: #3EB25E;
+    --light-green: rgba(62, 178, 94, 0.3);
+    --hover-green: #55ce77;
+    --yellow: #ffff7d61;
+
+    font-size: 62.5%;
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 979px) {
+
+    article h1 {
+        font-size: 1.8rem;
+    }
+
+    article p {
+        width: 95%;
+    }
+
+    #backBtn,
+    #formStart {
+        padding: 4px 15px;
+    }
+}
