@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourvey Form - Form 02</title>
+    <link rel="stylesheet" href="../../global/globalStyle.css"/>
+    <link rel="stylesheet" href="form04.css" type="text/css">
+    <script src="../../../dist/app.js"></script>
+</head>
+<body>
+   <main>
+        <figure class="side-img" id="index-figure">
+            <img src="../../img/five.svg" alt="a-hero-image">
+        </figure>
+
+        <article>
+            <form action="">
+                <fieldset class="user-fieldset">
+                    <label for="fullName">
+                        <h1 class="input-title">Full Name:</h1>
+                        <input type="text" id="fullName" placeholder="Nasser Toghiri">
+                    </label>
+                    <label for="email">
+                        <h1 class="input-title">Email:</h1>
+                        <input type="email" name="email" id="email" placeholder="N.Toghiri@Gmail.com">
+                    </label>
+                    <label for="age" id="age-container">
+                        <h1 class="input-title">Age:</h1>
+                        <input type="number" name="age" id="age" placeholder="-- --">
+                    </label>
+                </fieldset>
+            </form>
+
+            <footer>
+                <button class="fullBtn">Back</button>
+                <input type="submit" value="Submit" class="fullBtn">
+            </footer>
+        </article>
+   </main> 
+</body>
+</html>

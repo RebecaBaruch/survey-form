@@ -4,6 +4,8 @@
     --green: #3EB25E;
     --light-green: rgba(62, 178, 94, 0.3);
     --hover-green: #55ce77;
+    --yellow: #ffff7d61;
+
     font-size: 62.5%;
 }
 
@@ -73,7 +75,7 @@ p {
     font-size: 2.1rem;
 }
 
-a, button {
+a, button, input[type='submit'] {
     padding: 10px 30px;
     background-color: var(--green);
     
@@ -102,6 +104,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
 }
 
 article form fieldset p{
@@ -137,6 +140,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .dbButton-box {
@@ -196,7 +200,8 @@ footer {
     }   
     
    article .dbButton-box button,
-   .fullBtn {
+   .fullBtn,
+   input[type='submit'] {
        padding: 5px;
        width: 100%;
        font-size: .9rem;
@@ -261,7 +266,8 @@ footer {
     }
 
     .dbButton-box button,
-    .fullBtn {
+    .fullBtn,
+    input[type='submit'] {
         padding: 5px auto;
         width: 100%;
         font-size: .9rem;
@@ -344,7 +350,8 @@ footer {
     }
 
     .dbButton-box button,
-    .fullBtn {
+    .fullBtn,
+    input[type='submit'] {
         padding: 10px auto;
         width: 100%;
         font-size: 1.5rem;
