@@ -73,7 +73,7 @@
     transform: rotate(45deg);
   }
 
-  /*cellphone*/
+/*cellphone*/
 @media (max-width: 767px) {
 
     .checkbox-container {
