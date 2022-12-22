@@ -75,7 +75,9 @@ p {
     font-size: 2.1rem;
 }
 
-a, button, input[type='submit'] {
+a, 
+button, 
+input[type='submit'] {
     padding: 10px 30px;
     background-color: var(--green);
     
@@ -94,7 +96,8 @@ a {
 }
 
 a:hover, 
-button:hover {
+button:hover,
+input[type='submit']:hover {
     background-color: var(--hover-green);
     cursor: pointer;
 }

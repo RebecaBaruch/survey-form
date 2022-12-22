@@ -3,7 +3,7 @@
     --light-green: rgba(62, 178, 94, 0.3);
     --hover-green: #55ce77;
     --yellow: #ffff7d61;
-    
+
     font-size: 62.5%;
 }
 
@@ -16,10 +16,12 @@ textarea {
 
     border-radius: 20px;
     border: 1px solid #00000040;
+    font-family: 'Roboto', sans-serif;
 }
 
 textarea:focus {
     border: var(--green);
+    color: #0000009c;
 }
 
 /*cellphone*/

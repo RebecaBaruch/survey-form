@@ -1,32 +1,104 @@
-#index-figure{
+:root {
+    --green: #3EB25E;
+    --light-green: rgba(62, 178, 94, 0.3);
+    --hover-green: #55ce77;
+    --yellow: #ffff7d61;
+
+    font-size: 62.5%;
+}
+
+#index-figure {
     display: flex;
     justify-content: start;
 }
 
-#welcome-title{
-    font-size: 2rem;
+.index-article {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-#welcome-subTlt{
+#indexTxt {
+    margin-bottom: 35px;
+}
+
+#welcome-title {
+    margin-bottom: 10px;
+    font-size: 10rem;
+}
+
+#welcome-subTlt {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-    #welcome-title{
+#lesgo {
+    padding: 7px 70px;
+    font-size: 2.5rem;
+}
+
+/*cellphone*/
+@media (max-width: 767px) {
+    #index-figure {
+        padding-left: 24px;
+    }
+
+    #welcome-title {
         font-size: 4rem;
+    }
+
+    #welcome-subTlt {
+        font-size: 1.5rem;
+    }
+
+    #indexTxt {
+        margin-bottom: 15px;
+    }
+
+    #lesgo {
+        padding: 4px 55px;
+        font-size: 1.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    #welcome-title{
-        font-size: 5rem;
+/*tablet*/
+@media (min-width: 768px) and (max-width: 979px) {
+    #welcome-title {
+        font-size: 5.8rem;
     }
 
-    #welcome-subTlt{
-        font-size: 1.2rem;
+    #welcome-subTlt {
+        font-size: 1.5rem;
     }
 
-    button {
-        font-size: 1rem;
+    #indexTxt {
+        margin-bottom: 15px;
+    }
+
+    #lesgo {
+        padding: 4px 55px;
+        font-size: 1.5rem;
+    }
+}
+
+/*desktop 1024px*/
+@media (min-width: 1024px) and (max-width: 1030px) {
+    #welcome-title {
+        font-size: 8em;
+    }
+
+    #welcome-subTlt {
+        font-size: 2rem;
+    }
+
+    #indexTxt {
+        margin-bottom: 15px;
+    }
+
+    #lesgo {
+        padding: 4px 55px;
+        font-size: 2rem;
     }
 }
