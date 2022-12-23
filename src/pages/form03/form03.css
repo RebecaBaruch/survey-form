@@ -25,9 +25,6 @@ textarea:focus {
 }
 
 .custom-alert {
-    display: flex;
-    justify-content: end;
-    align-items: center;
     padding: 15px;
     width: 100%;
 
@@ -38,6 +35,16 @@ textarea:focus {
 .alert-text {
     font-size: 1.2rem;
     color: rgba(90, 90, 90, 0.441)
+}
+
+.disableAlert {
+    display: none;
+}
+
+.ableAlert {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 /*cellphone*/

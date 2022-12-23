@@ -91,35 +91,41 @@ const boxChecked = checkbox.forEach((input: any) => {
 //---------------------------------------------------------------------------------------------
 
 
-// //textarea validation
-// const counter: HTMLElement = document.getElementById("counter-alert")! as HTMLElement;
+//textarea validation
+const counter: HTMLElement = document.getElementById("counter-alert")! as HTMLElement;
 
 
-// textArea.addEventListener("keydown", (e) => {
-//   let maxChars: number = 10;
-//   let minChars: number = 3;
-//   let inputLength: number = textArea.value.length;
-//   let charVer: number;
+textArea.addEventListener("keydown", (e) => {
+  let maxChars: number = 130;
+  let minChars: number = 3;
+  let inputLength: number = textArea.value.length;
+  let charVer: number;
 
-//   //we gonna use this in a future moment for creating a counter
-//   charVer = maxChars - inputLength;
-//   //   console.log(inputLength);
-//   //   console.log(textArea.value);
+  charVer = maxChars - inputLength + 1;
 
-//   while(inputLength >= 1 && inputLength < maxChars){
-//     counter.innerHTML += (charVer)!;
-//     counter.innerHTML += (' ');
-//   }
+  if(inputLength > 0 && inputLength < maxChars) {
+    //   counter.classList.remove('disableAlert');
+    //   counter.classList.add('ableAlert');
 
-//   if(inputLength < maxChars || textArea.value === '') sbmDisabled();
+      console.log(counter.classList);
+      if(!(e.key === 'Backspace')) {
+        counter.innerHTML = (charVer.toString())!;
+      }
+      if(e.key === 'Backspace' && charVer < maxChars) {
+        charVer++;
+        counter.innerHTML = (charVer.toString())!;
+      }
+  }
 
-//   if(inputLength >= minChars) sbmAbled();
+  if(inputLength < maxChars || textArea.value === '') sbmDisabled();
 
-//   if(inputLength >= maxChars) {
-//     if(!(e.key === 'Backspace')) {
-//         e.preventDefault();
-//     }
-//   }
+  if(inputLength >= minChars) sbmAbled();
 
-//   console.log(charVer);
-// });
+  if(inputLength >= maxChars) {
+    if(!(e.key === 'Backspace')) {
+        e.preventDefault();
+    }
+  }
+
+  console.log(charVer);
+});
