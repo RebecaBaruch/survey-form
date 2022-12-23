@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
     <link rel="stylesheet" href="form03.css" type="text/css">
     <script src="../../../dist/app.js" defer></script>
+    <script src="../../../dist/textarea.js"></script>
 </head>
 <body>
   <main>
@@ -16,7 +17,7 @@
     </figure>
 
     <article>
-        <form action="">
+        <form action="/src/pages/form04/form04.html">
             <fieldset>
                 <h1 class="input-title">
                     If you or someone close to you has already made a loss on the investment, write down the details
@@ -30,10 +31,10 @@
 
             <footer>
                 <div class="dbButton-box">
-                    <button>Back</button>
+                    <button class="backBtn">Back</button>
                     <input class="disabledBtn sbmAccount" type="submit" value="Next" disabled>                
                 </div>
-                <button class="fullBtn">Skip</button>
+                <a href="../form04/form04.html" type="reset" class="fullBtn" id="skipBtn">Skip</a>
             </footer>
         </form>
     </article>

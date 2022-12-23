@@ -2,7 +2,6 @@ const radioOp: HTMLElement[] = document.querySelectorAll('.radioOp')! as any;
 let submitBtn: HTMLInputElement = document.querySelector('.sbmAccount')! as HTMLInputElement;
 //The getElementsByClassName method returns an array-like object (not an array).
 const checkbox: HTMLCollection[] = document.querySelectorAll('.checkBox')! as any;
-const textArea: HTMLTextAreaElement = document.getElementById('details-txt')! as HTMLTextAreaElement;
 
 let radioValue = ' ';
 let selected: number;
@@ -54,6 +53,14 @@ const boxChecked = checkbox.forEach((input: any) => {
     })
 });
 
+const backBtn: HTMLElement[] = document.querySelectorAll('.backBtn')! as any;
+
+const backHistory = backBtn.forEach((input: any) => {
+    input.addEventListener('click', () => {
+        window.history.back();
+    })
+});
+
 //--------------------------------------------------------------------------------------
 //user data validation
 
@@ -89,43 +96,3 @@ const boxChecked = checkbox.forEach((input: any) => {
 
 
 //---------------------------------------------------------------------------------------------
-
-
-//textarea validation
-const counter: HTMLElement = document.getElementById("counter-alert")! as HTMLElement;
-
-
-textArea.addEventListener("keydown", (e) => {
-  let maxChars: number = 130;
-  let minChars: number = 3;
-  let inputLength: number = textArea.value.length;
-  let charVer: number;
-
-  charVer = maxChars - inputLength + 1;
-
-  if(inputLength > 0 && inputLength < maxChars) {
-    //   counter.classList.remove('disableAlert');
-    //   counter.classList.add('ableAlert');
-
-      console.log(counter.classList);
-      if(!(e.key === 'Backspace')) {
-        counter.innerHTML = (charVer.toString())!;
-      }
-      if(e.key === 'Backspace' && charVer < maxChars) {
-        charVer++;
-        counter.innerHTML = (charVer.toString())!;
-      }
-  }
-
-  if(inputLength < maxChars || textArea.value === '') sbmDisabled();
-
-  if(inputLength >= minChars) sbmAbled();
-
-  if(inputLength >= maxChars) {
-    if(!(e.key === 'Backspace')) {
-        e.preventDefault();
-    }
-  }
-
-  console.log(charVer);
-});
