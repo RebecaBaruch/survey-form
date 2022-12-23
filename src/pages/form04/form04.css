@@ -38,6 +38,25 @@ input[type=number]:focus {
     margin-bottom: 20px;
 }
 
+.disabledSubm {
+    background-color: var(--green);
+    color: white;
+    animation: disaAble 2s ease-out;
+}
+
+@keyframes disaAble {
+    0% {
+        background-color: rgb(210, 47, 47);
+        box-shadow: rgba(255, 2, 2, 0.2) 0px 8px 24px;
+        color: white;
+    }
+
+    100% {
+        background-color: var(--green);
+        color: white;
+    }
+}
+
 /*cellphone*/
 @media (max-width: 767px) {
     input[type=text],

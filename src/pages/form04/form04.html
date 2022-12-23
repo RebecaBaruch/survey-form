@@ -7,7 +7,7 @@
     <title>Sourvey Form - Form 02</title>
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
     <link rel="stylesheet" href="form04.css" type="text/css">
-    <script src="../../../dist/app.js"></script>
+    <script src="../../../dist/userValidation.js" defer></script>
 </head>
 <body>
    <main>
@@ -16,7 +16,7 @@
         </figure>
 
         <article>
-            <form action="">
+            <form action="../success/success.html" method="POST">
                 <fieldset class="user-fieldset">
                     <label for="fullName">
                         <h1 class="input-title">Full Name:</h1>
@@ -35,7 +35,7 @@
 
             <footer>
                 <button class="fullBtn">Back</button>
-                <input class="disabledBtn sbmAccount" type="Submit" value="Next" disabled>
+                <input class="abled sbmAccount" id="submUser" type="Submit" value="Next">
             </footer>
         </article>
    </main> 

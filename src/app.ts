@@ -2,9 +2,7 @@ const radioOp: HTMLElement[] = document.querySelectorAll('.radioOp')! as any;
 let submitBtn: HTMLInputElement = document.querySelector('.sbmAccount')! as HTMLInputElement;
 //The getElementsByClassName method returns an array-like object (not an array).
 const checkbox: HTMLCollection[] = document.querySelectorAll('.checkBox')! as any;
-
 const textArea: HTMLTextAreaElement = document.getElementById('details-txt')! as HTMLTextAreaElement;
-
 
 let radioValue = ' ';
 let selected: number;
@@ -56,14 +54,54 @@ const boxChecked = checkbox.forEach((input: any) => {
     })
 });
 
+//--------------------------------------------------------------------------------------
+//user data validation
+
+
+// userName.addEventListener("keydown", () => {
+//     let nameRegex: any = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+//     let nameResult: any = nameRegex.test(userName.value);
+
+//     if(nameResult == true) {
+//         console.log('It works!');
+//     }
+// });
+
+// //user email validation
+// email.addEventListener("keydown", () => {
+//     let emailRegex: any = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//     let emailResult: any = emailRegex.test(email.value);
+
+//     if(emailResult == true) {
+//         console.log('It works!');
+//     }
+// });
+
+// //user age validation
+// ['click', 'keydown'].forEach((event) => userAge.addEventListener(event, () => {
+//     let ageRegex: any = /^[0-9]+\.?[0-9]*$/;
+//     let ageResult: any = ageRegex.test(userAge.value);
+
+//     if(ageResult == true) {
+//         console.log('It works!');
+//     }
+// }));
+
+
+//---------------------------------------------------------------------------------------------
+
+
 //textarea validation
 textArea.addEventListener("keydown", (e) => {
   let maxChars: number = 10;
   let minChars: number = 3;
-  let inputLength = textArea.value.length;
-  
-  console.log(inputLength);
-  console.log(textArea.value);
+  let inputLength: number = textArea.value.length;
+  let charVer: number;
+
+  //we gonna use this in a future moment for creating a counter
+  charVer = maxChars - inputLength;
+  //   console.log(inputLength);
+  //   console.log(textArea.value);
 
   if(inputLength <= maxChars || textArea.value === '') sbmDisabled();
 
@@ -74,4 +112,6 @@ textArea.addEventListener("keydown", (e) => {
         e.preventDefault();
     }
   }
+
+  console.log(charVer);
 });
