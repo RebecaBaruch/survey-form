@@ -1,6 +1,5 @@
 class UserInput {
     submBtn: HTMLElement;
-
     userName: HTMLInputElement;
     email: HTMLInputElement;
     age: HTMLInputElement;
@@ -49,7 +48,7 @@ class UserInput {
             localStorage.setItem('age', user.age);
 
             this.clearInputs();
-            this.navigateTo('success/success.html');
+            this.navigateTo('/src/pages/success/success.html');
             
         }else{ 
             console.log('It doesn\'t work!');

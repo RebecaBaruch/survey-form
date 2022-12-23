@@ -91,27 +91,35 @@ const boxChecked = checkbox.forEach((input: any) => {
 //---------------------------------------------------------------------------------------------
 
 
-//textarea validation
-textArea.addEventListener("keydown", (e) => {
-  let maxChars: number = 10;
-  let minChars: number = 3;
-  let inputLength: number = textArea.value.length;
-  let charVer: number;
+// //textarea validation
+// const counter: HTMLElement = document.getElementById("counter-alert")! as HTMLElement;
 
-  //we gonna use this in a future moment for creating a counter
-  charVer = maxChars - inputLength;
-  //   console.log(inputLength);
-  //   console.log(textArea.value);
 
-  if(inputLength <= maxChars || textArea.value === '') sbmDisabled();
+// textArea.addEventListener("keydown", (e) => {
+//   let maxChars: number = 10;
+//   let minChars: number = 3;
+//   let inputLength: number = textArea.value.length;
+//   let charVer: number;
 
-  if(inputLength >= minChars) sbmAbled();
+//   //we gonna use this in a future moment for creating a counter
+//   charVer = maxChars - inputLength;
+//   //   console.log(inputLength);
+//   //   console.log(textArea.value);
 
-  if(inputLength >= maxChars) {
-    if(!(e.key === 'Backspace')) {
-        e.preventDefault();
-    }
-  }
+//   while(inputLength >= 1 && inputLength < maxChars){
+//     counter.innerHTML += (charVer)!;
+//     counter.innerHTML += (' ');
+//   }
 
-  console.log(charVer);
-});
+//   if(inputLength < maxChars || textArea.value === '') sbmDisabled();
+
+//   if(inputLength >= minChars) sbmAbled();
+
+//   if(inputLength >= maxChars) {
+//     if(!(e.key === 'Backspace')) {
+//         e.preventDefault();
+//     }
+//   }
+
+//   console.log(charVer);
+// });

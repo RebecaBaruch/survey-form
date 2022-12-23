@@ -12,17 +12,88 @@ body {
 }
 
 article {
-    padding: 15px;
+    padding: 30px;
+    width: auto;
+
     border-radius: 15px;
     background-color: white;
+}
+
+#success-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+    color: white;
+    background-color: var(--green);
+}
+
+#success-header h1 {
+    font-size: 3.2rem;
+    white-space: nowrap;
+}
+
+h1 {
+    font-size: 2.2rem;
 }
 
 .row{
     display: flex;
     justify-content: start;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
-
     width: 100%;
+
+    background-color: rgb(239, 249, 253);
+}
+
+/*cellphone*/
+@media (max-width: 767px) {
+    article {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #success-header {
+        padding: 7px;
+        margin-bottom: 10px;
+
+        border-radius: 7px;
+    }
+
+    #success-header h1 {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 979px) {
+    article {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #success-header {
+        padding: 7px;
+        margin-bottom: 10px;
+
+        border-radius: 7px;
+    }
+
+    #success-header h1 {
+        font-size: 1.7rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
 }

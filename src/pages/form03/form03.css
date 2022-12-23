@@ -24,6 +24,22 @@ textarea:focus {
     color: #0000009c;
 }
 
+.custom-alert {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.alert-text {
+    font-size: 1.2rem;
+    color: rgba(90, 90, 90, 0.441)
+}
+
 /*cellphone*/
 @media (max-width: 767px) {
     fieldset {
