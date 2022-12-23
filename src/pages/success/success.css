@@ -1,0 +1,28 @@
+:root {
+    --green: #3EB25E;
+    --light-green: rgba(62, 178, 94, 0.3);
+    --hover-yellow: #FFFF7D;
+    --yellow: #ffff7d61;
+
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--green);
+}
+
+article {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    width: 100%;
+}
