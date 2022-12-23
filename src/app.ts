@@ -10,6 +10,19 @@ let radioValue = ' ';
 let selected: number;
 selected = 0;
 
+//function for button abled to submit the form
+function sbmAbled() {
+    submitBtn.classList.remove('disabledBtn');
+    submitBtn.classList.add('abled');
+    submitBtn.disabled = false;
+}
+
+//function for button disabled to submit the form
+function sbmDisabled() {
+    submitBtn.classList.remove('abled');
+    submitBtn.classList.add('disabledBtn');
+    submitBtn.disabled = false;
+}
 
 //radio button validation
 const radioChecked = radioOp.forEach((input: any) => {
@@ -20,10 +33,7 @@ const radioChecked = radioOp.forEach((input: any) => {
         
         if(input.checked == true) {
             radioValue = input.value;
-            submitBtn.classList.remove('disabledBtn');
-            submitBtn.classList.add('abled');
-            submitBtn.disabled = false;
-    
+            sbmAbled();
             console.log(submitBtn.classList);
         }
     })
@@ -38,19 +48,10 @@ const boxChecked = checkbox.forEach((input: any) => {
         
         if(input.checked) {
             selected++;
-            if(selected >= 1) {
-                submitBtn.classList.remove('disabledBtn');
-                submitBtn.classList.add('abled');
-                submitBtn.disabled = true;
-            } 
+            if(selected >= 1) sbmAbled();
         }else {
             selected--;
-            if(selected === 0) {
-                submitBtn.classList.remove('abled');
-                submitBtn.classList.add('disabledBtn');
-                submitBtn.disabled = false;
-
-            }            
+            if(selected === 0) sbmDisabled();      
         }
     })
 });
@@ -64,17 +65,9 @@ textArea.addEventListener("keydown", (e) => {
   console.log(inputLength);
   console.log(textArea.value);
 
-  if(inputLength <= maxChars || textArea.value === '') {
-    submitBtn.classList.remove('add');
-    submitBtn.classList.add('disabledBtn');
-    submitBtn.disabled = true;
-  }
+  if(inputLength <= maxChars || textArea.value === '') sbmDisabled();
 
-  if(inputLength >= minChars) {
-    submitBtn.classList.remove('disabledBtn');
-    submitBtn.classList.add('abled');
-    submitBtn.disabled = false;
-  }
+  if(inputLength >= minChars) sbmAbled();
 
   if(inputLength >= maxChars) {
     if(!(e.key === 'Backspace')) {
