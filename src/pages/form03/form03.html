@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../global/globalStyle.css"/>
     <link rel="stylesheet" href="form03.css" type="text/css">
     <script src="../../../dist/app.js" defer></script>
-    <script src="../../../dist/textarea.js"></script>
+    <script src="../../../dist/textarea.js" defer></script>
 </head>
 <body>
   <main>
@@ -24,8 +24,8 @@
                 </h1>
                 <textarea name="details-txt" id="details-txt" cols="30" rows="10" maxlength="130" required></textarea>
                 <!--alert de caracteres-->
-                <div class="custom-alert disableAlert"> 
-                    <p class="alert-text">130/<span id="counter-alert">130</span></p>
+                <div class="custom-alert"> 
+                    <p class="alert-text" id="counter-alert"></p>
                 </div>
             </fieldset>
 
@@ -34,7 +34,7 @@
                     <button class="backBtn">Back</button>
                     <input class="disabledBtn sbmAccount" type="submit" value="Next" disabled>                
                 </div>
-                <a href="../form04/form04.html" type="reset" class="fullBtn" id="skipBtn">Skip</a>
+                <a href="../form04/form04.html" class="fullBtn" id="skipBtn" type="reset">Skip</a>
             </footer>
         </form>
     </article>

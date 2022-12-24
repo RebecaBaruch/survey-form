@@ -18,7 +18,7 @@ function sbmAbled() {
 function sbmDisabled() {
     submitBtn.classList.remove('abled');
     submitBtn.classList.add('disabledBtn');
-    submitBtn.disabled = false;
+    submitBtn.disabled = true;
 }
 
 //radio button validation
@@ -58,6 +58,7 @@ const backBtn: HTMLElement[] = document.querySelectorAll('.backBtn')! as any;
 const backHistory = backBtn.forEach((input: any) => {
     input.addEventListener('click', () => {
         window.history.back();
+        localStorage.clear();
     })
 });
 
