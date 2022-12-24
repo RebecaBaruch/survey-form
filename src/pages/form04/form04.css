@@ -38,6 +38,10 @@ input[type=number] {
     animation: disaAble 2s ease-out;
 }
 
+.inputError {
+    border: 1px solid #ff6347;
+}
+
 @keyframes disaAble {
     0% {
         background-color: rgb(210, 47, 47);

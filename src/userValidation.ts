@@ -4,12 +4,20 @@ class UserInput {
     email: HTMLInputElement;
     age: HTMLInputElement;
 
+    nameRegex: any;
+    emailRegex: any;
+    ageRegex: any;
+
     constructor() {
             this.submBtn = document.getElementById("submUser")! as HTMLElement;
 
             this.userName = document.getElementById("fullName")! as HTMLInputElement;
             this.email = document.getElementById("email")! as HTMLInputElement;
             this.age = document.getElementById("age")! as HTMLInputElement;
+
+            this.nameRegex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+            this.emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            this.ageRegex = /^[0-9]+\.?[0-9]*$/;
 
             this.configure()
     }
@@ -25,13 +33,13 @@ class UserInput {
         const email = this.email.value;
         const age = this.age.value;
         
-        let nameRegex: any = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+        let nameRegex = this.nameRegex; 
         let nameResult: any = nameRegex.test(userName);
 
-        let emailRegex: any = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        let emailResult: any = emailRegex.test(email);
+        let emailRegex = this.emailRegex;
+        let emailResult = emailRegex.test(email);
 
-        let ageRegex: any = /^[0-9]+\.?[0-9]*$/;
+        let ageRegex = this.nameRegex;
         let ageResult: any = ageRegex.test(age);
 
         if(nameResult == true && emailResult == true && ageResult == true) {
@@ -52,6 +60,7 @@ class UserInput {
             
         }else{ 
             console.log('It doesn\'t work!');
+            this.clearInputs();
             this.disableBtn();
         }
     }
@@ -70,7 +79,33 @@ class UserInput {
         const btn = this.submBtn;
         btn.classList.add('disabledSubm');
         setTimeout(() => btn.classList.remove('disabledSubm'), 2000);
-    }
+
+        const userName = this.userName;
+        const email = this.email;
+        const age = this.age;
+
+        let nameRegex = this.nameRegex; 
+        let nameResult: any = nameRegex.test(userName);
+
+        let emailRegex = this.emailRegex;
+        let emailResult = emailRegex.test(email);
+
+        let ageRegex = this.nameRegex;
+        let ageResult: any = ageRegex.test(age);
+
+        function inputError(input: any){
+            input.setAttribute('style', 'border: 1px solid #ff6347; transition: all 0.5s ease-out;');
+
+            setTimeout(() => input.removeAttribute('style', 'border: 1px solid #ff6347;'), 1000);
+        }
+
+        if(nameResult == false) inputError(userName);
+        
+        if(emailResult == false) inputError(email);
+      
+        if(ageResult == false) inputError(age);
+
+    }   
 }
 
 const userInput = new UserInput();
