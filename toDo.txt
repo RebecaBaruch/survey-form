@@ -1,0 +1,5 @@
+[]fix navigation functions;
+[]fix hover styles;
+    ->select;
+    ->radio button;
+    ->checkbox;
