@@ -4,9 +4,9 @@ class UserInput {
     email: HTMLInputElement;
     age: HTMLInputElement;
 
-    nameRegex: any;
+    /*nameRegex: any;
     emailRegex: any;
-    ageRegex: any;
+    ageRegex: any;*/
 
     constructor() {
             this.submBtn = document.getElementById("submUser")! as HTMLElement;
@@ -15,9 +15,9 @@ class UserInput {
             this.email = document.getElementById("email")! as HTMLInputElement;
             this.age = document.getElementById("age")! as HTMLInputElement;
 
-            this.nameRegex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+            /*this.nameRegex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
             this.emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            this.ageRegex = /^[0-9]+\.?[0-9]*$/;
+            this.ageRegex = /^[0-9]+\.?[0-9]*$/;*/
 
             this.configure()
     }
@@ -33,13 +33,13 @@ class UserInput {
         const email = this.email.value;
         const age = this.age.value;
         
-        let nameRegex = this.nameRegex; 
+        let nameRegex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/; 
         let nameResult: any = nameRegex.test(userName);
 
-        let emailRegex = this.emailRegex;
-        let emailResult = emailRegex.test(email);
+        let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let emailResult: any = emailRegex.test(email);
 
-        let ageRegex = this.nameRegex;
+        let ageRegex =  /^[0-9]+\.?[0-9]*$/;
         let ageResult: any = ageRegex.test(age);
 
         if(nameResult == true && emailResult == true && ageResult == true) {
@@ -62,6 +62,10 @@ class UserInput {
             console.log('It doesn\'t work!');
             this.clearInputs();
             this.disableBtn();
+            if(nameResult == false) this.inputError(this.userName);
+            if(emailResult == false) this.inputError(this.email);
+            if(ageResult == false) this.inputError(this.age);
+
         }
     }
 
@@ -80,20 +84,7 @@ class UserInput {
         btn.classList.add('disabledSubm');
         setTimeout(() => btn.classList.remove('disabledSubm'), 2000);
 
-        const userName = this.userName;
-        const email = this.email;
-        const age = this.age;
-
-        let nameRegex = this.nameRegex; 
-        let nameResult: any = nameRegex.test(userName);
-
-        let emailRegex = this.emailRegex;
-        let emailResult = emailRegex.test(email);
-
-        let ageRegex = this.nameRegex;
-        let ageResult: any = ageRegex.test(age);
-
-        function inputError(input: any){
+        /*function inputError(input: any){
             input.setAttribute('style', 'border: 1px solid #ff6347; transition: all 0.5s ease-out;');
 
             setTimeout(() => input.removeAttribute('style', 'border: 1px solid #ff6347;'), 1000);
@@ -105,7 +96,16 @@ class UserInput {
       
         if(ageResult == false) inputError(age);
 
+        console.log(nameResult, emailResult, ageResult);
+        console.log(userName, email, age);
+        console*/
     }   
+
+    private inputError(input: any) {
+        input.setAttribute('style', 'border: 2px solid #ff6347; transition: all 0.5s ease-out;');
+
+        setTimeout(() => input.removeAttribute('style', 'border: 2px solid #ff6347;'), 1000);
+    }
 }
 
 const userInput = new UserInput();
