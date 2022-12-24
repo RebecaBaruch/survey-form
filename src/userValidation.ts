@@ -102,9 +102,8 @@ class UserInput {
     }   
 
     private inputError(input: any) {
-        input.setAttribute('style', 'border: 1;5px solid #ff6347; transition: all 0.5s ease-out;');
-
-        setTimeout(() => input.removeAttribute('style', 'border: 1.5px solid #ff6347;'), 1000);
+        input.setAttribute('style', 'border: 2px solid #ff6347; transition: all 0.5s ease-out;');
+        setTimeout(() => input.removeAttribute('style', 'border: 2px solid #ff6347;'), 1000);
     }
 }
 
