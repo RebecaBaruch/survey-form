@@ -37,6 +37,7 @@ const radioChecked = radioOp.forEach((input: any) => {
 });
 
 //checkbox validation
+//issues to fix: its not able to select the same checkbox after back history
 const boxChecked = checkbox.forEach((input: any) => {
     input.addEventListener('click', () => {
         radioValue = input.value;
