@@ -24,12 +24,6 @@ input[type=number] {
     font-size: 1.7rem;
 }
 
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=number]:focus {
-    outline-color: var(--yellow);
-}
-
 #age {
     width: 130px;
 }
