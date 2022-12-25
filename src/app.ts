@@ -71,6 +71,7 @@ const boxChecked = checkbox.forEach((input: any) => {
 });
 
 const backBtn: HTMLElement = document.querySelector('.backBtn') as any;
+const nextBtn: HTMLElement = document.querySelector('.nextBtn') as any;
 
 const navigation: any = [
     '/public/index.html',
