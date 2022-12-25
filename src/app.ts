@@ -25,9 +25,7 @@ const sbmDisabled = () => {
 const radioChecked = radioOp.forEach((input: any) => {
     input.addEventListener('click', () => {
         radioValue = input.value;
-        console.log(radioValue);
-        console.log(input.checked)
-        
+            
         if(input.checked == true) {
             radioValue = input.value;
             sbmAbled();
@@ -37,12 +35,10 @@ const radioChecked = radioOp.forEach((input: any) => {
 });
 
 //checkbox validation
-//issues to fix: its not able to select the same checkbox after back history
 const boxChecked = checkbox.forEach((input: any) => {
     let storageSel: string;
     if(!input.checked) {
         input.addEventListener('click', () => {
-            
             if(input.checked) {
                 selected++;
                 if(selected >= 1) {
@@ -50,8 +46,6 @@ const boxChecked = checkbox.forEach((input: any) => {
 
                     storageSel = selected.toString();
                     localStorage.setItem('selected', storageSel);
-    
-                    console.log(storageSel);
                 }
 
             }
@@ -62,16 +56,15 @@ const boxChecked = checkbox.forEach((input: any) => {
 
                     storageSel = selected.toString();
                     localStorage.setItem('selected', storageSel);
-
-                    console.log(storageSel)
                 }      
             }
         });
     }
 });
 
-const backBtn: HTMLElement = document.querySelector('.backBtn') as any;
-const skipBtn: HTMLElement = document.querySelector('.skipBtn') as any;
+//navigation functions
+const backBtn: HTMLButtonElement = document.querySelector('.backBtn') as HTMLButtonElement;
+const skipBtn: HTMLButtonElement = document.querySelector('.skipBtn') as HTMLButtonElement;
 
 const navigation: any = [
     '/public/index.html',
@@ -108,3 +101,34 @@ if(skipBtn){
         nextURL();
     });
 }
+
+//Success page
+class userOutput {
+    userOutput: HTMLElement;
+    emailOutput: HTMLElement;
+    ageOutput: HTMLElement;
+
+    inputName: string;
+    inputEmail: string;
+    inputAge: string;
+
+    constructor() {
+        this.userOutput = document.getElementById('userOutput')! as any;
+        this.emailOutput = document.getElementById('emailOutput')! as HTMLElement;
+        this.ageOutput = document.getElementById('ageOutput')! as HTMLElement;
+
+        this.inputName = localStorage.getItem('user')!;
+        this.inputEmail = localStorage.getItem('email')!;
+        this.inputAge = localStorage.getItem('age')!;
+
+        this.configure()
+    }
+
+    private configure() {
+        this.userOutput.innerText = this.inputName;
+        this.emailOutput.innerText = this.inputEmail;
+        this.ageOutput.innerText = this.inputAge;
+    }
+}
+
+const userOutputElement = new userOutput();
