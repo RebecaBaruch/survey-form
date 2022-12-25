@@ -148,6 +148,10 @@ select {
     cursor: pointer;
 }
 
+select:hover {
+    background-image: url('../img/Vector 1.2.svg');
+}
+
 input:focus {
     outline: 2px solid var(--yellow);
 }
