@@ -71,7 +71,7 @@ const boxChecked = checkbox.forEach((input: any) => {
 });
 
 const backBtn: HTMLElement = document.querySelector('.backBtn') as any;
-const nextBtn: HTMLElement = document.querySelector('.nextBtn') as any;
+const skipBtn: HTMLElement = document.querySelector('.skipBtn') as any;
 
 const navigation: any = [
     '/public/index.html',
@@ -85,49 +85,26 @@ const navigation: any = [
 
 if(backBtn){
     backBtn.addEventListener('click', () => {
-        const atualURL = () => {
+        const backlURL = () => {
             navigation.forEach((item: any, index: any) => {
                 if(window.location.pathname === item){
                     window.location.pathname = navigation[index-1];
                 }
             });
         }
-        atualURL();
+        backlURL();
     });
 }
 
-//--------------------------------------------------------------------------------------
-//user data validation
-
-
-// userName.addEventListener("keydown", () => {
-//     let nameRegex: any = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
-//     let nameResult: any = nameRegex.test(userName.value);
-
-//     if(nameResult == true) {
-//         console.log('It works!');
-//     }
-// });
-
-// //user email validation
-// email.addEventListener("keydown", () => {
-//     let emailRegex: any = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//     let emailResult: any = emailRegex.test(email.value);
-
-//     if(emailResult == true) {
-//         console.log('It works!');
-//     }
-// });
-
-// //user age validation
-// ['click', 'keydown'].forEach((event) => userAge.addEventListener(event, () => {
-//     let ageRegex: any = /^[0-9]+\.?[0-9]*$/;
-//     let ageResult: any = ageRegex.test(userAge.value);
-
-//     if(ageResult == true) {
-//         console.log('It works!');
-//     }
-// }));
-
-
-//---------------------------------------------------------------------------------------------
+if(skipBtn){
+    skipBtn.addEventListener('click', () => {
+        const nextURL = () => {
+            navigation.forEach((item: any, index: any) => {
+                if(window.location.pathname === item){
+                    window.location.pathname = navigation[index+1];
+                }
+            });
+        }
+        nextURL();
+    });
+}
