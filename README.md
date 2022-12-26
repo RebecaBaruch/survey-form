@@ -1,7 +1,7 @@
 # Survey_Form
 A project from the compass uol trainee program. This was our first chalenge, within some specifications.
 
-[sourvey-form-working.webm](https://user-images.githubusercontent.com/71520936/209546118-e0192689-2142-4a77-8ab5-594791908444.webm)
+![sourvey-form-working](https://user-images.githubusercontent.com/71520936/209546280-b33fbddc-d534-49cb-9ebc-65a23f1fce4c.gif)
 
 ### 🔑 Mandatory requirements
 <ul> 
