@@ -21,7 +21,7 @@ A project from the compass uol trainee program. This was our first chalenge, wit
 ### <img align="center" alt="FIGMA" height="25" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">FIGMA LINK:
 <a>https://www.figma.com/file/lb8YnlygMTI3RiAY8KKDCB/survey-form---desktop-type-(Community)?node-id=0%3A1</a>
 
-## Development setup
+## :computer: Development setup
 Git clone.
 ```
 git clone https://github.com/RebecaBaruch/Survey_Form.git
@@ -39,7 +39,7 @@ tsc -w
 ````
 You can see the running application by live server on VSCode.
 
-## Features
+## :hammer_and_wrench: Features
 #### Radio Button + select validation
 ![radio-button-validation](https://user-images.githubusercontent.com/71520936/209553123-a71b2122-90dd-4d67-8dda-72157fe1e663.gif)
 
@@ -65,7 +65,7 @@ For validation, regex:
         let ageResult: any = ageRegex.test(age);
 ```
 
-## Issues
+## :exploding_head: Issues
 #### Select validation
 My function to validate the 'Next' button verifying if the select value is null only works if you click on a radio button.
 ![radio-button-issue](https://user-images.githubusercontent.com/71520936/209554162-60521ea6-2aea-4596-89eb-1e862eeeb630.gif)
