@@ -1,14 +1,16 @@
 # Survey_Form
 A project from the compass uol trainee program. This was our first chalenge, within some specifications.
 
-## 🔑 Mandatory requirements
+[sourvey-form-working.webm](https://user-images.githubusercontent.com/71520936/209546118-e0192689-2142-4a77-8ab5-594791908444.webm)
+
+### 🔑 Mandatory requirements
 <ul> 
     <li>Using HTML, CSS, Java Script</li>
     <li>Layout according to Figma (Pixel Perfect)</li>
     <li>Responsive Layout</li>
 </ul>
 
-## 🔑  Additional Functionality (NOT MANDATORY)
+### 🔑  Additional Functionality (NOT MANDATORY)
 <ul> 
     <li>Validation of inputs with Java Script.</li>
     <li>User data stored in localStorage.</li>
@@ -19,5 +21,5 @@ A project from the compass uol trainee program. This was our first chalenge, wit
     </li>
 </ul>
 
-## <img align="center" alt="FIGMA" height="25" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">FIGMA LINK:
+### <img align="center" alt="FIGMA" height="25" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">FIGMA LINK:
 <a>https://www.figma.com/file/lb8YnlygMTI3RiAY8KKDCB/survey-form---desktop-type-(Community)?node-id=0%3A1</a>
