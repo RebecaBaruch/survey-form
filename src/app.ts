@@ -2,6 +2,7 @@
 const radioOp: HTMLElement[] = document.querySelectorAll('.radioOp')! as any;
 let submitBtn: HTMLInputElement = document.querySelector('.sbmAccount')! as HTMLInputElement;
 const checkbox: HTMLCollection[] = document.querySelectorAll('.checkBox')! as any;
+const select: HTMLSelectElement = document.getElementById('exist-account')! as HTMLSelectElement;
 
 let radioValue = ' ';
 let selected: number;
@@ -23,15 +24,16 @@ const sbmDisabled = () => {
 
 //radio button validation
 const radioChecked = radioOp.forEach((input: any) => {
-    input.addEventListener('click', () => {
-        radioValue = input.value;
-            
-        if(input.checked == true) {
+        input.addEventListener('click', () => {
             radioValue = input.value;
-            sbmAbled();
-            console.log(submitBtn.classList);
-        }
-    })
+            if(input.checked == true && select.value != "") {
+                radioValue = input.value;
+                sbmAbled();
+                console.log(submitBtn.classList);
+            }
+            if(input.checked == true && select.value === "") sbmDisabled();
+            if(input.checked == false && select.value!= "") sbmDisabled();
+        });
 });
 
 //checkbox validation
@@ -41,13 +43,13 @@ const boxChecked = checkbox.forEach((input: any) => {
         input.addEventListener('click', () => {
             if(input.checked) {
                 selected++;
-                if(selected >= 1) {
+                if(selected >= 1 && select.value != "") {
                     sbmAbled();
 
                     storageSel = selected.toString();
                     localStorage.setItem('selected', storageSel);
                 }
-
+                if(selected == 0 && select.value === "") sbmDisabled();
             }
             if(!input.checked) {
                 selected--;
@@ -56,7 +58,8 @@ const boxChecked = checkbox.forEach((input: any) => {
 
                     storageSel = selected.toString();
                     localStorage.setItem('selected', storageSel);
-                }      
+                }    
+                if(selected == 0 && select.value === "") sbmDisabled();
             }
         });
     }
