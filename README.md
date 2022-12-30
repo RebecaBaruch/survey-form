@@ -1,4 +1,4 @@
-# Survey_Form
+# Survey Form
 A project from the compass uol trainee program. This was our first chalenge, within some specifications.
 ![readme me-header](https://user-images.githubusercontent.com/71520936/209555596-9b9afb62-eed8-4e3f-bc3c-6ae088ae3172.svg)
 
